@@ -1,0 +1,18 @@
+body{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: whitesmoke;
+margin-right: 70%;
+}
+
+.kaverilista{
+    border: 5px solid black;
+    margin-bottom: 100px;
+    padding-left: 5px;
+    
+}
+
+.kaverieditori{
+    border: 5px solid black;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
