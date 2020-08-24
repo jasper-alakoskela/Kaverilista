@@ -1,18 +1,64 @@
-body{
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-background-color: whitesmoke;
-margin-right: 70%;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(48, 48, 48);
+  margin-right: 70%;
+  color: rgb(0, 0, 0);
 }
 
-.kaverilista{
-    border: 5px solid black;
-    margin-bottom: 100px;
-    padding-left: 5px;
-    
+/*Versio 1*/
+
+.kaverilista {
+  border: 5px solid whitesmoke;
+  margin-bottom: 100px;
+  padding-left: 5px;
 }
 
-.kaverieditori{
-    border: 5px solid black;
-    padding-bottom: 10px;
-    padding-left: 5px;
+.kaverilista {
+  animation-name: h1;
+  animation-duration: 7s;
+  animation-iteration-count: 1000;
+}
+
+@keyframes h1 {
+  0% {
+    background-color: red;
+  }
+  10% {
+    background-color: orangered;
+  }
+  20% {
+    background-color: orange;
+  }
+  30% {
+    background-color: yellow;
+  }
+  40% {
+    background-color: greenyellow;
+  }
+  50% {
+    background-color: green;
+  }
+  60% {
+    background-color: blue;
+  }
+  70% {
+    background-color: blueviolet;
+  }
+  80% {
+    background-color: purple;
+  }
+  90% {
+    background-color: violet;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+/*Versio 2*/
+
+.kaverieditori {
+  border: 5px solid black;
+  padding-bottom: 10px;
+  padding-left: 5px;
 }
