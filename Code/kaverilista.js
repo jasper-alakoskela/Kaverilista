@@ -20,14 +20,14 @@ function namePrompt() {
   }
 }
 
-/*Versio 2*/
+
 const kaveriLista2 = document.getElementById("kaverilista2");
 const listInput = document.getElementById("list-input");
 const addBtn = document.getElementById("add");
 const removeBtn = document.getElementById("remove");
 
 
-/*Lisää kaveri*/
+
 addBtn.addEventListener("click", function() {
   const newLi = document.createElement("LI");
   const liContent = document.createTextNode(listInput.value);
@@ -35,6 +35,16 @@ addBtn.addEventListener("click", function() {
   kaveriLista2.appendChild(newLi);
 });
 
-/*Poista kaveri*/
 
 
+/*Versio 2*/
+const kaveriLista2 = document.getElementById("kaverilista2");
+const listInput = document.getElementById("list-input");
+const addBtn = document.getElementById("add");
+
+addBtn("click", function addName() {
+  const newLi = document.createElement("LI");
+  const liContent = document.createTextNode(listInput.value);
+  newLi.appendChild(liContent);
+  kaveriLista2.appendChild(newLi);
+});
