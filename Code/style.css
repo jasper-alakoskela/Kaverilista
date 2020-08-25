@@ -1,18 +1,70 @@
-body{
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-background-color: whitesmoke;
-margin-right: 70%;
-}
-
-.kaverilista{
-    border: 5px solid black;
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(img/friends.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: x-large;
+  }
+  
+  /*Versio 1*/
+  
+  .kaverilista {
+    border: 5px solid rgb(46, 46, 46);
     margin-bottom: 100px;
+    margin-right: 84%;
     padding-left: 5px;
-    
-}
+    animation-name: h1;
+    animation-duration: 7s;
+    animation-iteration-count: 1000;
+  } 
+  @keyframes h1 {
+    0% {
+      background-color: red;
+    }
+    10% {
+      background-color: orangered;
+    }
+    20% {
+      background-color: orange;
+    }
+    30% {
+      background-color: yellow;
+    }
+    40% {
+      background-color: greenyellow;
+    }
+    50% {
+      background-color: green;
+    }
+    60% {
+      background-color: blue;
+    }
+    70% {
+      background-color: blueviolet;
+    }
+    80% {
+      background-color: purple;
+    }
+    90% {
+      background-color: violet;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+  
+  /*Versio 2*/
+  
+  .kaverieditori{
+    color: ivory;
+  }
 
-.kaverieditori{
-    border: 5px solid black;
-    padding-bottom: 10px;
-    padding-left: 5px;
-}
+  .kaverieditori button{
+    background-color: forestgreen;
+    color: ivory;
+  }
+
+  .kaverieditori input{
+    background-color: forestgreen;
+    color: ivory;
+  }
