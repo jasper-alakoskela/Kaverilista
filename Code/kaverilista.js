@@ -19,14 +19,12 @@ function namePrompt() {
     kaveriLista.appendChild(newLi);
   }
 }
-
+/*Versio 2*/
 
 const kaveriLista2 = document.getElementById("kaverilista2");
 const listInput = document.getElementById("list-input");
 const addBtn = document.getElementById("add");
 const removeBtn = document.getElementById("remove");
-
-
 
 addBtn.addEventListener("click", function() {
   const newLi = document.createElement("LI");
@@ -36,15 +34,16 @@ addBtn.addEventListener("click", function() {
 });
 
 
+//ota inputin value ja jos se täsmää mikä on listassa olevaan se poistetaan poistonapista
+removeBtn.addEventListener("click", function() {
+  const nameToRemove = listInput.value.toLowerCase();
+  const items = kaveriLista2.getElementsByTagName("li");
 
-/*Versio 2*/
-const kaveriLista2 = document.getElementById("kaverilista2");
-const listInput = document.getElementById("list-input");
-const addBtn = document.getElementById("add");
-
-addBtn("click", function addName() {
-  const newLi = document.createElement("LI");
-  const liContent = document.createTextNode(listInput.value);
-  newLi.appendChild(liContent);
-  kaveriLista2.appendChild(newLi);
+    Array.from(items).forEach(function(item){
+      let itemName = item.firstChild.textContent;
+      if ( itemName.toLowerCase().indexOf(nameToRemove) != -1) {
+        console.log(itemName);
+        kaveriLista2.removeChild(item);
+      }
+    });
 });
