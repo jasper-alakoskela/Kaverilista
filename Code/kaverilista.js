@@ -12,7 +12,6 @@ function namePrompt() {
 
   for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
-
     const newLi = document.createElement("LI");
     const liContent = document.createTextNode(names[i]);
     newLi.appendChild(liContent);
@@ -25,6 +24,9 @@ const kaveriLista2 = document.getElementById("kaverilista2");
 const listInput = document.getElementById("list-input");
 const addBtn = document.getElementById("add");
 const removeBtn = document.getElementById("remove");
+const sortOutBtn = document.getElementById("sort-out");
+
+//Lisää
 
 addBtn.addEventListener("click", function() {
   const newLi = document.createElement("LI");
@@ -33,8 +35,8 @@ addBtn.addEventListener("click", function() {
   kaveriLista2.appendChild(newLi);
 });
 
+//Poista
 
-//ota inputin value ja jos se täsmää mikä on listassa olevaan se poistetaan poistonapista
 removeBtn.addEventListener("click", function() {
   const nameToRemove = listInput.value.toLowerCase();
   const items = kaveriLista2.getElementsByTagName("li");
@@ -46,4 +48,26 @@ removeBtn.addEventListener("click", function() {
         kaveriLista2.removeChild(item);
       }
     });
+});
+
+//Järjestä
+
+sortOutBtn.addEventListener("click", function() {
+  let j, switching, b, shouldSwitch
+  switching = true;
+  while (switching) {
+    switching = false;
+    b = kaveriLista2.children;
+    for (j = 0; j < (b.length - 1); j++) {
+      shouldSwitch = false;
+      if (b[j].innerHTML.toLowerCase() > b[j + 1].innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      b[j].parentNode.insertBefore(b[j + 1], b[j]);
+      switching = true;
+    }
+  }
 });
